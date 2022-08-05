@@ -675,7 +675,7 @@ const loader = setInterval(() => {
         findCode(
           uploadGit,
           problemName,
-          `Solution-${Math.random().toFixed(3) * 1000}` + language,
+          `${problemName}-solution_${Math.random().toFixed(3) * 1000}` + language,
           probStats,
           'upload',
           // callback is called when the code upload to git is a success
