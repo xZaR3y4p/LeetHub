@@ -1,3 +1,5 @@
+## The name of the solution file will be whatever you put after "name: " in the first line of the solution code
+
 <h1 align="center">
   <a href="https://standardjs.com"><img src="assets/octocode.png" alt="LeetHub - Automatically sync your code to GitHub." width="400"></a>
   <br>
