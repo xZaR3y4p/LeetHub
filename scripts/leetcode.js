@@ -1,4 +1,6 @@
 /* Enum for languages supported by LeetCode. */
+let new_file_name = "";
+
 const languages = {
   Python: '.py',
   Python3: '.py',
@@ -346,11 +348,13 @@ function findCode(
             }
 
             if (code != null) {
+              // make first line of code be the file name
+              new_file_name = code.slice(code.indexOf("name:") + 6, code.indexOf("\n"))
               setTimeout(function () {
                 uploadGit(
                   btoa(unescape(encodeURIComponent(code))),
                   problemName,
-                  fileName,
+                  new_file_name,
                   msg,
                   action,
                   true,
@@ -675,7 +679,7 @@ const loader = setInterval(() => {
         findCode(
           uploadGit,
           problemName,
-          `${problemName}-solution_${Math.random().toFixed(3) * 1000}` + language,
+          problemName + language,
           probStats,
           'upload',
           // callback is called when the code upload to git is a success
